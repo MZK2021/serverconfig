@@ -242,85 +242,85 @@
 
 
 
-//--------------------------------------------------
-/// QR code in html returned from server 
+--------------------------------------------------
+/ QR code in html returned from server 
 
 
 
-// import express from 'express';
-// import path from 'path';
-// import { fileURLToPath } from 'url';
-// import { dirname } from 'path';
-// import bodyParser from 'body-parser'
-// import  qr  from 'qr-image'; 
-// import fs from 'fs'
+import express from 'express';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+import bodyParser from 'body-parser'
+import  qr  from 'qr-image'; 
+import fs from 'fs'
 
-// const app = express();
-// const __filename = fileURLToPath(import.meta.url);
-// const __dirname = dirname(__filename);
+const app = express();
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 
-// app.use(express.static(__dirname));
-// app.use(bodyParser.urlencoded({extended:true}))
+app.use(express.static(__dirname));
+app.use(bodyParser.urlencoded({extended:true}))
 
-// app.get('/', function (req, res) {
-//         let filePath = path.join(__dirname, 'Qrdomain.html');
-//         res.sendFile(filePath)
-// });
+app.get('/', function (req, res) {
+        let filePath = path.join(__dirname, 'Qrdomain.html');
+        res.sendFile(filePath)
+});
 
-// app.post('/post', (req, res) => {
-//       console.log(req.body['Domain'])
-//       let url = req.body['Domain']
-//       var qr_svg = qr.image(url);
-//  qr_svg.pipe(fs.createWriteStream('My_qr_fromForm.png'));
-//  let filePath = path.join(__dirname, 'QR.html');
-//  res.sendFile(filePath)
-//     });
+app.post('/post', (req, res) => {
+      console.log(req.body['Domain'])
+      let url = req.body['Domain']
+      var qr_svg = qr.image(url);
+ qr_svg.pipe(fs.createWriteStream('My_qr_fromForm.png'));
+ let filePath = path.join(__dirname, 'QR.html');
+ res.sendFile(filePath)
+    });
 
-// app.use(function (req, res, next) {
-//      res.status(404).send("404 Not Found 1");
-//     });
+app.use(function (req, res, next) {
+     res.status(404).send("404 Not Found 1");
+    });
 
-// app.listen(3001, () => {
-//      console.log('Server started on http://localhost:3001');
-// });
+app.listen(3001, () => {
+     console.log('Server started on http://localhost:3001');
+});
 
-/// ---------------------------------------
-// here is Qrdomian.html for above 
-// <!DOCTYPE html>
-// <html lang="en">
-// <head>
-//     <meta charset="UTF-8">
-//     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-//     <title>Submit Name Form</title>
-// </head>
-// <body>
+/ ---------------------------------------
+here is Qrdomian.html for above 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Name Form</title>
+</head>
+<body>
 
-//     <h1> Milli Enter Domain to create QR</h1>
+    <h1> Milli Enter Domain to create QR</h1>
 
-// <form action="http://localhost:3001/post" method="POST">
-//     <label for="Domain">Domain:</label><br>
-//     <input type="text" id="Domain" name="Domain" required><br><br>
-//     <input type="submit" value="Submit">
-// </form>
+<form action="http://localhost:3001/post" method="POST">
+    <label for="Domain">Domain:</label><br>
+    <input type="text" id="Domain" name="Domain" required><br><br>
+    <input type="submit" value="Submit">
+</form>
 
-// </body>
-// </html>
+</body>
+</html>
 
-//// -------------------------------------
-//here is QR.html for above 
-// <!DOCTYPE html>
-// <html lang="en">
-// <head>
-//     <meta charset="UTF-8">
-//     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-//     <title>Document</title>
-// </head>
-// <body>
+// -------------------------------------
+here is QR.html for above 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
     
-// <h1>Here is your QR milli</h1>
-//     <img src="./My_qr_fromForm.png" height="500px" width="500px">
-//     <h1><a href="Qrdomain.html" >Try anotherone </a></h1>
-// </body>
+<h1>Here is your QR milli</h1>
+    <img src="./My_qr_fromForm.png" height="500px" width="500px">
+    <h1><a href="Qrdomain.html" >Try anotherone </a></h1>
+</body>
 
-// </html>
+</html>
