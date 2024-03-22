@@ -287,40 +287,40 @@ app.listen(3001, () => {
 
 // ---------------------------------------
 //here is Qrdomian.html for above 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Submit Name Form</title>
-</head>
-<body>
+// <!DOCTYPE html>
+// <html lang="en">
+// <head>
+//     <meta charset="UTF-8">
+//     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+//     <title>Submit Name Form</title>
+// </head>
+// <body>
 
-    <h1> Milli Enter Domain to create QR</h1>
+//     <h1> Milli Enter Domain to create QR</h1>
 
-<form action="http://localhost:3001/post" method="POST">
-    <label for="Domain">Domain:</label><br>
-    <input type="text" id="Domain" name="Domain" required><br><br>
-    <input type="submit" value="Submit">
-</form>
+// <form action="http://localhost:3001/post" method="POST">
+//     <label for="Domain">Domain:</label><br>
+//     <input type="text" id="Domain" name="Domain" required><br><br>
+//     <input type="submit" value="Submit">
+// </form>
 
-</body>
-</html>
+// </body>
+// </html>
 
-// -------------------------------------
-//here is QR.html for above 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+
+
+// <!DOCTYPE html>
+// <html lang="en">
+// <head>
+//     <meta charset="UTF-8">
+//     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+//     <title>Document</title>
+// </head>
+// <body>
     
-<h1>Here is your QR milli</h1>
-    <img src="./My_qr_fromForm.png" height="500px" width="500px">
-    <h1><a href="Qrdomain.html" >Try anotherone </a></h1>
-</body>
+// <h1>Here is your QR milli</h1>
+//     <img src="./My_qr_fromForm.png" height="500px" width="500px">
+//     <h1><a href="Qrdomain.html" >Try anotherone </a></h1>
+// </body>
 
-</html>
+// </html>
