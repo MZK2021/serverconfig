@@ -286,7 +286,7 @@ app.listen(3001, () => {
 });
 
 // ---------------------------------------
-here is Qrdomian.html for above 
+//here is Qrdomian.html for above 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -308,7 +308,7 @@ here is Qrdomian.html for above
 </html>
 
 // -------------------------------------
-here is QR.html for above 
+//here is QR.html for above 
 <!DOCTYPE html>
 <html lang="en">
 <head>
