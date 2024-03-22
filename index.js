@@ -242,8 +242,8 @@
 
 
 
---------------------------------------------------
-/ QR code in html returned from server 
+//--------------------------------------------------
+// QR code in html returned from server 
 
 
 
@@ -285,7 +285,7 @@ app.listen(3001, () => {
      console.log('Server started on http://localhost:3001');
 });
 
-/ ---------------------------------------
+// ---------------------------------------
 here is Qrdomian.html for above 
 <!DOCTYPE html>
 <html lang="en">
